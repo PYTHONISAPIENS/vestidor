@@ -3,9 +3,11 @@ import csv
 def funcilector (ruta):
     with open(ruta,"r") as docucsv:
         lector = csv.reader(docucsv, delimiter = ",")
+        titulo = next(lector)
+        
         for i in lector:
-            print("...."*4)
-            print(i)
+            eliterable=zip(titulo,i)
+            print(list(eliterable))
 
 if __name__ == "__main__":
-    funcilector("./vestidorcsvconUTF8.csv")
+    funcilector("./vestidorcsvsinUTF8.csv")

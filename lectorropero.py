@@ -12,6 +12,6 @@ def funcion_lector(ruta):
    #         print(i)
             
 if __name__ == "__main__":
-    funcion_lector ('./ROPERO.csv')
+    funcion_lector ('./vestidorcsvsinUTF8.csv')
 
     
