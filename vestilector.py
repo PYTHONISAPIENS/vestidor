@@ -1,13 +1,22 @@
 import csv
 
-def funcilector (ruta):
-    with open(ruta,"r") as docucsv:
-        lector = csv.reader(docucsv, delimiter = ",")
-        titulo = next(lector)
-        
-        for i in lector:
-            eliterable=zip(titulo,i)
-            print(list(eliterable))
-
+def lector(ruta):
+    with open(ruta, "r") as doccsv:
+        ellector = csv.reader(doccsv, delimiter = ";")
+        cabecero= next(ellector)
+        datos= []
+        for i in ellector:
+            eliterable = zip(cabecero,i)
+            dictprenda = {key: value for key,value in eliterable}
+            datos.append(dictprenda)
+        return datos
+ 
+           
+                   
+            
 if __name__ == "__main__":
-    funcilector("./vestidorcsvsinUTF8.csv")
+    datos = lector("./vestidorcsvsinUTF8.csv")
+    print(datos[3])
+    print(type(datos))
+ 
+ 
