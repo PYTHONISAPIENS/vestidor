@@ -16,7 +16,7 @@ def lector(ruta):
             
 if __name__ == "__main__":
     datos = lector("./vestidorcsvsinUTF8.csv")
-    print(datos[3])
+    print(datos[10])
     print(type(datos))
  
  
