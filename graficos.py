@@ -1,18 +1,18 @@
 import matplotlib.pyplot as plt
 
-def generate_bar_chart(labels, values):
+def generadorgraficos(paises, precios):
   fig, ax = plt.subplots()
-  ax.bar(labels, values)
+  ax.bar(paises,precios)
   plt.show()
-
-def generate_pie_chart(labels, values):
-  fig, ax = plt.subplots()
-  ax.pie(values, labels=labels)
-  ax.axis('equal')
-  plt.show()
-
-if __name__ == '__main__':
-  labels = ['a', 'b', 'c']
-  values = [10, 40, 800]
-  # generate_bar_chart(labels, values)
-  generate_pie_chart(labels, values)
+  
+def grafiredondo (labels, precios):
+      fig, ax = plt.subplots()
+      ax.pie(precios, labels = labels)
+      ax.axis("equal")
+      plt.show()
+  
+if __name__ =="__main__":
+  labels = ["colombia", "españa","africa"]
+  precios = [2200,4500,3000]
+  #generadorgraficos(paises,precios)
+  grafiredondo(labels,precios)
